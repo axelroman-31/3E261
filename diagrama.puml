@@ -1,4 +1,5 @@
 @startuml
+
 class Juego
 class Mundo
 class Nivel
@@ -55,4 +56,5 @@ Mario o-- Moneda
 BloquePregunta o-- Hongo
 BloquePregunta o-- FlorDeFuego
 BloquePregunta o-- Moneda
+
 @enduml
