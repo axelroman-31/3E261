@@ -48,7 +48,6 @@ Mario *-- Vida
 Mario *-- Puntaje
 Mario *-- ProyectilFuego
 KoopaTroopa *-- Caparazon
-
 Mario o-- Hongo
 Mario o-- FlorDeFuego
 Mario o-- Estrella
@@ -56,6 +55,5 @@ Mario o-- Moneda
 BloquePregunta o-- Hongo
 BloquePregunta o-- FlorDeFuego
 BloquePregunta o-- Moneda
-
 
 @enduml
