@@ -7,7 +7,7 @@ class Nivel
 class Personaje
 class Mario{
 -vida vida(3)
--morir(1)
+-morir(1) 
 +muerte:comer (hongo)
 +nivel:meter(tuberia)
 +nivel:salir(tuberia)
