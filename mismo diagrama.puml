@@ -2,14 +2,37 @@
 
 class Juego
 class Mundo
+class crecimiento
 class Nivel
 class Personaje
-class Mario
-class Luigi
+class Mario{
+-vida vida(3)
+-morir(1)
++muerte:comer (hongo)
++nivel:meter(tuberia)
++nivel:salir(tuberia)
+}
+class Luigi{
+-vida vida(3)
+-morir(1)
++crecimiento:comer (hongo)
++nivel:meter(tuberia)
++nivel:salir(tuberia)
+}
 class Enemigo
-class Goomba
-class KoopaTroopa
-class Bowser
+class Goomba{
++ daño:acercar(daño)
+-morir(1)
+}
+class KoopaTroopa{
++ daño:acercar(daño)
+-morir(1)
+}
+class Bowser{
++ daño:acercar(daño)
++daño:lanzarbola(daño)
+-morir(1)
+}
 class JefeFinal
 class PrincesaPeach
 class Hongo
@@ -22,17 +45,11 @@ class BloqueLadrillo
 class Tuberia
 class Bandera
 class Castillo
-class Plataforma
-class PlataformaMovil
 class Vida
 class Puntaje
 class ProyectilFuego
 class Caparazon
-class Tiempo
-class Musica
-class SonidoEfecto
-class Camara
-class Evento
+
 
 Mario --|> Personaje
 Luigi --|> Personaje
@@ -41,7 +58,6 @@ Goomba --|> Enemigo
 KoopaTroopa --|> Enemigo
 JefeFinal --|> Enemigo
 Bowser --|> JefeFinal
-PlataformaMovil --|> Plataforma
 BloquePregunta --|> Bloque
 BloqueLadrillo --|> Bloque
 
@@ -58,11 +74,15 @@ Mario "1" *-- "1..∞" Vida
 Mario "1" *-- "1" Puntaje
 Mario "1" *-- "0..*" ProyectilFuego
 KoopaTroopa "1" *-- "1" Caparazon
+Mario*-- crecimiento
+Luigi*-- crecimiento
+Mario*-- PrincesaPeach
 
 Mario "1" o-- "0..*" Hongo
 Mario "1" o-- "0..*" FlorDeFuego
 Mario "1" o-- "0..*" Estrella
 Mario "1" o-- "0..*" Moneda
+
 BloquePregunta "1" o-- "0..1" Hongo
 BloquePregunta "1" o-- "0..1" FlorDeFuego
 BloquePregunta "1" o-- "0..*" Moneda
