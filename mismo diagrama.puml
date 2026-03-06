@@ -70,7 +70,7 @@ Nivel "1" *-- "0..*" Tuberia
 Nivel "1" *-- "0..*" Moneda
 Nivel "1" *-- "1" Bandera
 Nivel "1" *-- "0..1" Castillo
-Mario "1" *-- "1..∞" Vida
+Mario "1" *-- "1..3" Vida
 Mario "1" *-- "1" Puntaje
 Mario "1" *-- "0..*" ProyectilFuego
 KoopaTroopa "1" *-- "1" Caparazon
