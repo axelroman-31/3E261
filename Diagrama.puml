@@ -34,23 +34,30 @@ Bowser --|> JefeFinal
 BloquePregunta --|> Bloque
 BloqueLadrillo --|> Bloque
 
-Juego *-- Mundo
-Mundo *-- Nivel
-Nivel *-- Enemigo
-Nivel *-- Bloque
-Nivel *-- Plataforma
-Nivel *-- Tuberia
-Nivel *-- Moneda
-Mario *-- Vida
-Mario *-- Puntaje
-Mario *-- ProyectilFuego
-KoopaTroopa *-- Caparazon
-Mario o-- Hongo
-Mario o-- FlorDeFuego
-Mario o-- Estrella
-Mario o-- Moneda
-BloquePregunta o-- Hongo
-BloquePregunta o-- FlorDeFuego
-BloquePregunta o-- Moneda
+Juego "1" *-- "1..*" Mundo
+Mundo "1" *-- "1..*" Nivel
+Nivel "1" *-- "1..*" Enemigo
+Nivel "1" *-- "1..*" Bloque
+Nivel "1" *-- "1..*" Plataforma
+Nivel "1" *-- "0..*" Tuberia
+Nivel "1" *-- "0..*" Moneda
+Nivel "1" *-- "1" Bandera
+Nivel "1" *-- "0..1" Castillo
+Mario "1" *-- "1..∞" Vida
+Mario "1" *-- "1" Puntaje
+Mario "1" *-- "0..*" ProyectilFuego
+KoopaTroopa "1" *-- "1" Caparazon
+Mario*-- crecimiento
+Luigi*-- crecimiento
+Mario*-- PrincesaPeach
 
+Mario "1" o-- "0..*" Hongo
+Mario "1" o-- "0..*" FlorDeFuego
+Mario "1" o-- "0..*" Estrella
+Mario "1" o-- "0..*" Moneda
+
+BloquePregunta "1" o-- "0..1" Hongo
+BloquePregunta "1" o-- "0..1" FlorDeFuego
+BloquePregunta "1" o-- "0..*" Moneda
+Castillo "1" o-- "1" Bandera
 @enduml
